@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-export JEKYLL_VERSION=3.5
-docker run --rm \
-  --volume=$PWD:/srv/jekyll \
-  -it jekyll/builder:$JEKYLL_VERSION \
-  jekyll $@
+. ~/.rvm/scripts/rvm
+rvm requirements
+rvm install 2.3 --disable-binary
+rvm use 2.3
+find . -name gem
+gem install jekyll
