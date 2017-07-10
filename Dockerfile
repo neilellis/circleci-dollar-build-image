@@ -8,4 +8,5 @@ RUN sudo chmod 755 jekyll.sh
 RUN ./jekyll.sh ${JEKYLL_RUBY}
 RUN sudo ln -s ${HOME}/.rvm/gems/ruby-${JEKYLL_RUBY}/wrappers/jekyll /bin/jekyll
 RUN jekyll -v
+RUN cd ~ && git clone https://github.com/sillelien/build-utils.git && chmod a+x ~/build-utils/*.sh && cd -
 
