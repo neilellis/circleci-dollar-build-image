@@ -3,4 +3,3 @@
 rvm requirements
 rvm install $1 --disable-binary
 rvm use $1
-gem install jekyll
