@@ -14,4 +14,3 @@ RUN echo "github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwB
 RUN sudo chmod 600 ~/.ssh && sudo chmod 600 ~/.ssh/known_hosts
 ADD build-init.sh build-init.sh
 RUN sudo chmod 755 build-init.sh
-CMD sudo ./build-init.sh
