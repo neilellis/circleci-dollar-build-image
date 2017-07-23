@@ -1,6 +1,6 @@
 FROM circleci/openjdk:8-jdk-browsers
 RUN sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && \
-    sudo apt-get -y install gettext-base make gcc build-essential python python-pip && \
+    sudo apt-get -y install gettext-base make gcc build-essential python python-pip ntpdate && \
     sudo pip install aws-shell && cd ~ && git clone https://github.com/sillelien/dollar-parent.git __dp && \
     cd __dp && mvn install && cd -
 #RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 \
