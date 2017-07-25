@@ -18,3 +18,5 @@ RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A170311380
 #RUN sudo chmod 640 $HOME/.ssh/known_hosts
 COPY build-init.sh /home/circleci/.build-init.sh
 RUN sudo chmod 755 /home/circleci/.build-init.sh
+#RUN find . -name github_changelog_generator
+RUN sudo ln -s /home/circleci/.rvm/gems/ruby-2.4.0/wrappers/github_changelog_generator /bin/github_changelog_generator
