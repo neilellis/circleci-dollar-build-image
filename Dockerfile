@@ -1,4 +1,4 @@
-FROM circleci/openjdk:8-jdk-browsers
+FROM circleci/openjdk:9-jdk-browsers
 RUN sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && \
     sudo apt-get -y install gettext-base make gcc build-essential python python-pip ntpdate && \
     sudo pip install aws-shell && cd ~ && git clone https://github.com/sillelien/dollar-parent.git __dp && \
